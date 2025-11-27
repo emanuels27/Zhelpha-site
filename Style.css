@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo hero */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769") center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Navbar */
+nav {
+    position: relative;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00eaff;
+}
+
+/* Texto do hero */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    max-width: 500px;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.hero-text h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* Pacotes */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: #111;
+    color: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #00eaff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #00eaff33;
+}
+
+.preco {
+    display: block;
+    margin-top: 15px;
+    font-size: 26px;
+    color: #00eaff;
+}
+
+/* Rodapé */
+footer {
+    background: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
