@@ -207,3 +207,64 @@
                 if (top < windowHeight - 80) {
                     el.classList.add("reveal-show");
                 }
+
+                /* ================================
+   IA EM TEMPO REAL ZHELPHA
+================================ */
+
+// SUBSTITUA com sua chave
+const API_KEY = "SUA_API_KEY_AQUI";
+
+// Função com IA real
+async function gerarRespostaIA(pergunta) {
+    const url = "https://api.openai.com/v1/chat/completions";
+
+    const body = {
+        model: "gpt-4o-mini", 
+        messages: [
+            { role: "system", content: "Você é a Zhelpha AI. Fale como um atendente simpático e profissional brasileiro." },
+            { role: "user", content: pergunta }
+        ]
+    };
+
+    const resposta = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`
+        },
+        body: JSON.stringify(body)
+    });
+
+    const dados = await resposta.json();
+    return dados.choices[0].message.content;
+}
+
+// Substitui a resposta fake pela IA real
+async function sendMessage() {
+    const texto = input.value.trim();
+    if (!texto) return;
+
+    if (usadas >= LIMITE_PERGUNTAS) {
+        limitText.textContent = "Limite de 40 mensagens atingido. Para continuar, fale com a Zhelpha AI pelo WhatsApp.";
+        return;
+    }
+
+    addMessage(texto, "user");
+    input.value = "";
+    usadas++;
+    limitText.textContent = "Mensagens usadas: " + usadas + "/" + LIMITE_PERGUNTAS;
+
+    // Resposta IA ⭐
+    addMessage("Digitando...", "bot");
+    const todosMsgs = document.querySelectorAll(".msg-bot");
+    const msgDigitando = todosMsgs[todosMsgs.length - 1];
+
+    try {
+        const respostaIA = await gerarRespostaIA(texto);
+        msgDigitando.textContent = respostaIA;
+    } catch (err) {
+        msgDigitando.textContent = "Erro ao conectar com a IA.";
+        console.error(err);
+    }
+                            }
