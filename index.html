@@ -8,108 +8,210 @@
 </head>
 <body>
 
-    <header class="hero">
-        <div class="overlay"></div>
-        <nav>
-            <h1 class="logo">Zhelpha <span>AI</span></h1>
-        </nav>
+    <!-- LOADER DE ENTRADA -->
+    <div id="loader" class="loader">
+        <div class="loader-logo">Zhelpha <span>AI</span></div>
+        <p class="loader-sub">Carregando experiências inteligentes...</p>
+        <div class="loader-spinner"></div>
+    </div>
 
-        <div class="hero-text">
-            <h2>Transformando ideias em soluções inteligentes</h2>
-            <p>Automação, criação de sites, assistentes personalizados e tecnologia feita sob medida para você.</p>
-        </div>
-    </header>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div id="site-content" class="site-content">
 
-    <section class="sobre">
-        <h2>Sobre a Zhelpha AI</h2>
-        <p>A Zhelpha AI é uma empresa moderna focada em tecnologia inteligente. Desenvolvemos sites profissionais, automações para empresas, sistemas otimizados e assistentes baseados em IA que economizam tempo e aumentam resultados.</p>
-    </section>
+        <header class="hero">
+            <div class="overlay"></div>
+            <nav>
+                <h1 class="logo">Zhelpha <span>AI</span></h1>
+            </nav>
 
-    <section class="pacotes">
-        <h2>Nossos Pacotes</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3><a href="#pacote-start">Pacote Start</a></h3>
-                <p>Site simples e profissional + otimização básica.</p>
-                <span class="preco">R$ 149</span>
+            <div class="hero-text">
+                <h2>Transformando ideias em soluções inteligentes</h2>
+                <p>Automação, criação de sites, assistentes personalizados e tecnologia feita sob medida para você.</p>
             </div>
+        </header>
 
-            <div class="card">
-                <h3><a href="#pacote-pro">Pacote Pro</a></h3>
-                <p>Site completo + automações + chatbot básico.</p>
-                <span class="preco">R$ 399</span>
+        <!-- CHAT ZHELPHA NA HOME -->
+        <section class="chat-ia-home">
+            <h2>Converse com a Zhelpha AI</h2>
+            <p class="chat-ia-sub">
+                Teste nossa interface de chat e veja como a experiência do seu cliente pode ficar mais moderna.
+                (Limite de 40 mensagens nesta demonstração.)
+            </p>
+
+            <div class="chat-container">
+                <header class="chat-header">
+                    <h1>Chat Zhelpha AI</h1>
+                    <p class="version">v1.0 — Interface Futurista</p>
+                </header>
+
+                <div id="messages" class="messages">
+                    <div class="msg msg-bot">
+                        Olá! Sou a interface de chat da Zhelpha AI. Em breve aqui poderá ter uma IA real respondendo seus clientes.
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input id="userInput" type="text" placeholder="Digite sua mensagem..." autocomplete="off" />
+                    <button id="sendBtn">Enviar</button>
+                </div>
+
+                <p class="chat-limit" id="chatLimit">Mensagens usadas: 0/40</p>
             </div>
+        </section>
 
-            <div class="card">
-                <h3><a href="#pacote-ultimate">Pacote Ultimate</a></h3>
-                <p>Site premium + IA personalizada + automações avançadas.</p>
-                <span class="preco">R$ 749</span>
+        <section class="sobre reveal">
+            <h2>Sobre a Zhelpha AI</h2>
+            <p>A Zhelpha AI é uma empresa moderna focada em tecnologia inteligente. Desenvolvemos sites profissionais, automações para empresas, sistemas otimizados e assistentes baseados em IA que economizam tempo e aumentam resultados.</p>
+        </section>
+
+        <section class="pacotes reveal">
+            <h2>Nossos Pacotes</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3><a href="#pacote-start">Pacote Start</a></h3>
+                    <p>Site simples e profissional + otimização básica.</p>
+                    <span class="preco">R$ 149</span>
+                </div>
+
+                <div class="card">
+                    <h3><a href="#pacote-pro">Pacote Pro</a></h3>
+                    <p>Site completo + automações + chatbot básico.</p>
+                    <span class="preco">R$ 399</span>
+                </div>
+
+                <div class="card">
+                    <h3><a href="#pacote-ultimate">Pacote Ultimate</a></h3>
+                    <p>Site premium + IA personalizada + automações avançadas.</p>
+                    <span class="preco">R$ 749</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DETALHES DOS PACOTES -->
-    <section id="pacote-start" class="pacote-detalhe pacote-start">
-        <div class="container">
-            <h2>Pacote Start</h2>
-            <p>Ideal para quem está começando e quer uma presença digital rápida e profissional.</p>
-            <ul>
-                <li>Site institucional simples e responsivo.</li>
-                <li>Configuração básica de SEO.</li>
-                <li>Integração com redes sociais.</li>
-            </ul>
-            <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Start%20da%20Zhelpha%20AI." 
-               class="btn-pacote" target="_blank" rel="noopener noreferrer">
-                Quero o Pacote Start
-            </a>
-        </div>
-    </section>
+        <!-- DETALHES DOS PACOTES -->
+        <section id="pacote-start" class="pacote-detalhe pacote-start reveal">
+            <div class="container">
+                <h2>Pacote Start</h2>
+                <p>Ideal para quem está começando e quer uma presença digital rápida e profissional.</p>
+                <ul>
+                    <li>Site institucional simples e responsivo.</li>
+                    <li>Configuração básica de SEO.</li>
+                    <li>Integração com redes sociais.</li>
+                </ul>
+                <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Start%20da%20Zhelpha%20AI." 
+                   class="btn-pacote" target="_blank" rel="noopener noreferrer">
+                    Quero o Pacote Start
+                </a>
+            </div>
+        </section>
 
-    <section id="pacote-pro" class="pacote-detalhe pacote-pro">
-        <div class="container">
-            <h2>Pacote Pro</h2>
-            <p>Perfeito para negócios que precisam de automação e atendimento mais inteligente.</p>
-            <ul>
-                <li>Site completo com várias seções.</li>
-                <li>Automações de formulários e respostas.</li>
-                <li>Chatbot básico integrado ao negócio.</li>
-            </ul>
-            <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Pro%20da%20Zhelpha%20AI." 
-               class="btn-pacote" target="_blank" rel="noopener noreferrer">
-                Quero o Pacote Pro
-            </a>
-        </div>
-    </section>
+        <section id="pacote-pro" class="pacote-detalhe pacote-pro reveal">
+            <div class="container">
+                <h2>Pacote Pro</h2>
+                <p>Perfeito para negócios que precisam de automação e atendimento mais inteligente.</p>
+                <ul>
+                    <li>Site completo com várias seções.</li>
+                    <li>Automações de formulários e respostas.</li>
+                    <li>Chatbot básico integrado ao negócio.</li>
+                </ul>
+                <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Pro%20da%20Zhelpha%20AI." 
+                   class="btn-pacote" target="_blank" rel="noopener noreferrer">
+                    Quero o Pacote Pro
+                </a>
+            </div>
+        </section>
 
-    <section id="pacote-ultimate" class="pacote-detalhe pacote-ultimate">
-        <div class="container">
-            <h2>Pacote Ultimate</h2>
-            <p>Experiência completa com IA e automações avançadas para empresas que querem escala.</p>
-            <ul>
-                <li>Site premium com design exclusivo.</li>
-                <li>Fluxos de automação avançados.</li>
-                <li>Assistentes de IA personalizados para o negócio.</li>
-            </ul>
-            <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Ultimate%20da%20Zhelpha%20AI." 
-               class="btn-pacote" target="_blank" rel="noopener noreferrer">
-                Quero o Pacote Ultimate
-            </a>
-        </div>
-    </section>
-    <!-- FIM DETALHES DOS PACOTES -->
+        <section id="pacote-ultimate" class="pacote-detalhe pacote-ultimate reveal">
+            <div class="container">
+                <h2>Pacote Ultimate</h2>
+                <p>Experiência completa com IA e automações avançadas para empresas que querem escala.</p>
+                <ul>
+                    <li>Site premium com design exclusivo.</li>
+                    <li>Fluxos de automação avançados.</li>
+                    <li>Assistentes de IA personalizados para o negócio.</li>
+                </ul>
+                <a href="https://wa.me/5531989097687?text=Tenho%20interesse%20no%20Pacote%20Ultimate%20da%20Zhelpha%20AI." 
+                   class="btn-pacote" target="_blank" rel="noopener noreferrer">
+                    Quero o Pacote Ultimate
+                </a>
+            </div>
+        </section>
+        <!-- FIM DETALHES DOS PACOTES -->
 
-    <footer>
-        <p>Zhelpha AI © 2025 – Tecnologia ao seu favor.</p>
-        <p><a href="chat.html" class="link-chat">Testar a IA da Zhelpha</a></p>
-    </footer>
+        <footer>
+            <p>Zhelpha AI © 2025 – Tecnologia ao seu favor.</p>
+        </footer>
 
-    <a href="https://wa.me/5531989097687?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Zhelpha%20AI%20e%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os." 
-       class="whatsapp-button" 
-       target="_blank" 
-       rel="noopener noreferrer">
-        Fale conosco no WhatsApp
-    </a>
+        <a href="https://wa.me/5531989097687?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Zhelpha%20AI%20e%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os." 
+           class="whatsapp-button" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            Fale conosco no WhatsApp
+        </a>
 
-</body>
-</html>
+    </div> <!-- fim site-content -->
+
+    <!-- SCRIPTS -->
+    <script>
+        // Loader: esconde após o carregamento
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("site-content");
+            loader.classList.add("loader-hide");
+            setTimeout(() => {
+                loader.style.display = "none";
+                content.classList.add("site-content-show");
+            }, 600);
+        });
+
+        // Chat simples com limite de 40 mensagens (sem IA real)
+        const LIMITE_PERGUNTAS = 40;
+        let usadas = 0;
+
+        const messagesDiv = document.getElementById("messages");
+        const input = document.getElementById("userInput");
+        const btn = document.getElementById("sendBtn");
+        const limitText = document.getElementById("chatLimit");
+
+        function addMessage(texto, tipo) {
+            const div = document.createElement("div");
+            div.classList.add("msg", tipo === "user" ? "msg-user" : "msg-bot");
+            div.textContent = texto;
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function sendMessage() {
+            const texto = input.value.trim();
+            if (!texto) return;
+
+            if (usadas >= LIMITE_PERGUNTAS) {
+                limitText.textContent = "Limite de 40 mensagens atingido. Para continuar, fale com a Zhelpha AI pelo WhatsApp.";
+                return;
+            }
+
+            addMessage(texto, "user");
+            input.value = "";
+            usadas++;
+            limitText.textContent = "Mensagens usadas: " + usadas + "/" + LIMITE_PERGUNTAS;
+
+            // Resposta fake por enquanto
+            setTimeout(() => {
+                addMessage("Mensagem recebida. Em breve aqui pode responder uma IA conectada ao seu backend.", "bot");
+            }, 600);
+        }
+
+        btn.addEventListener("click", sendMessage);
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") sendMessage();
+        });
+
+        // Animação simples de revelar seções ao rolar
+        const reveals = document.querySelectorAll(".reveal");
+        window.addEventListener("scroll", () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach((el) => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - 80) {
+                    el.classList.add("reveal-show");
+                }
