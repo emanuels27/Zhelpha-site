@@ -5,6 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
+/* Rolagem suave na página */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Fundo hero */
 .hero {
     position: relative;
@@ -61,7 +66,7 @@ nav {
     opacity: 0.9;
 }
 
-/* Seções */
+/* Seções gerais */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -73,7 +78,7 @@ section {
     font-size: 18px;
 }
 
-/* Pacotes */
+/* Pacotes: cards principais */
 .cards {
     display: flex;
     justify-content: center;
@@ -96,11 +101,99 @@ section {
     background: #00eaff33;
 }
 
+/* Links dentro dos cards */
+.card h3 a {
+    color: #00eaff;
+    text-decoration: none;
+}
+
+.card h3 a:hover {
+    text-decoration: underline;
+}
+
 .preco {
     display: block;
     margin-top: 15px;
     font-size: 26px;
     color: #00eaff;
+}
+
+/* Seções de detalhes dos pacotes */
+.pacote-detalhe {
+    padding: 80px 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* Cores de fundo por pacote */
+.pacote-start {
+    background: linear-gradient(135deg, #050816, #0b1220);
+}
+
+.pacote-pro {
+    background: linear-gradient(135deg, #050816, #111827);
+}
+
+.pacote-ultimate {
+    background: linear-gradient(135deg, #050816, #1f2937);
+}
+
+/* Container interno dos detalhes */
+.pacote-detalhe .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px 24px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos e textos dos detalhes */
+.pacote-detalhe h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.pacote-detalhe p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+/* Lista de benefícios */
+.pacote-detalhe ul {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.pacote-detalhe ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pacote-detalhe ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #00eaff;
+}
+
+/* Botão dentro dos detalhes do pacote */
+.btn-pacote {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    background: #00eaff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn-pacote:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    transition: 0.2s ease;
 }
 
 /* Rodapé */
@@ -109,9 +202,9 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-  }
+}
 
-
+/* Botão flutuante do WhatsApp */
 .whatsapp-button {
     position: fixed;
     right: 16px;
