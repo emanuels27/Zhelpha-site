@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zhelpha AI • Chat</title>
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="chat-body">
 
 <div class="chat-container">
     <header class="chat-header">
-        <h1>Zhelpha AI</h1>
+        <h1>Chat Zhelpha AI</h1>
         <p class="version">v1.0 — IA Futurista</p>
     </header>
 
@@ -20,9 +20,31 @@
         <input id="userInput" type="text" placeholder="Digite sua mensagem..." autocomplete="off" />
         <button id="sendBtn">Enviar</button>
     </div>
+
+    <p class="chat-limit" id="chatLimit"></p>
+
+    <p class="chat-voltar">
+        <a href="index.html">← Voltar para o site</a>
+    </p>
 </div>
 
-<script src="chat.js"></script>
+<script>
+    const API_URL = "https://seu-backend-aqui.com/api/chat";
+    const LIMITE_PERGUNTAS = 5;
+    let usadas = 0;
 
-</body>
-</html>
+    const messagesDiv = document.getElementById("messages");
+    const input = document.getElementById("userInput");
+    const btn = document.getElementById("sendBtn");
+    const limitText = document.getElementById("chatLimit");
+
+    function addMessage(texto, tipo) {
+        const div = document.createElement("div");
+        div.classList.add("msg", tipo === "user" ? "msg-user" : "msg-bot");
+        div.textContent = texto;
+        messagesDiv.appendChild(div);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    async function sendMessage() {
+        const texto = input.value
