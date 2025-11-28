@@ -204,6 +204,16 @@ footer {
     text-align: center;
 }
 
+footer .link-chat {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer .link-chat:hover {
+    text-decoration: underline;
+}
+
 /* Botão flutuante do WhatsApp */
 .whatsapp-button {
     position: fixed;
@@ -227,7 +237,11 @@ footer {
     background-color: #1ebe5d;
     transform: translateY(-1px);
     transition: 0.2s ease;
-    }
+}
+
+/* =========================
+   ESTILOS DA PÁGINA DE CHAT
+   ========================= */
 
 body {
     margin: 0;
@@ -236,25 +250,41 @@ body {
     color: #fff;
 }
 
-.chat-container {
-    width: 100%;
-    height: 100vh;
+/* Fundo e centralização do chat */
+.chat-body {
+    background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
     display: flex;
-    flex-direction: column;
-    max-width: 900px;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
+/* Janela do chat */
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* Cabeçalho do chat */
 .chat-header {
     text-align: center;
     padding: 20px;
     border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
 }
 
 .chat-header h1 {
     color: #00eaff;
     text-shadow: 0 0 15px #00eaff;
+    font-size: 22px;
 }
 
 .version {
@@ -262,38 +292,47 @@ body {
     opacity: 0.8;
 }
 
+/* Área de mensagens */
 .messages {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
+/* Bolhas de mensagem */
 .msg {
-    margin-bottom: 18px;
     padding: 12px 15px;
     border-radius: 10px;
     max-width: 80%;
     line-height: 1.5;
+    font-size: 14px;
     animation: fadeIn 0.2s ease-in-out;
 }
 
-.user {
+/* Mensagem do usuário */
+.msg-user {
     background: rgba(0, 200, 255, 0.2);
     border: 1px solid rgba(0, 255, 255, 0.4);
     align-self: flex-end;
 }
 
-.bot {
+/* Mensagem da bot */
+.msg-bot {
     background: rgba(140, 0, 255, 0.25);
     border: 1px solid rgba(200, 0, 255, 0.4);
     align-self: flex-start;
 }
 
+/* Área de input */
 .chat-input {
     padding: 15px;
     display: flex;
     gap: 10px;
     border-top: 1px solid rgba(0, 255, 255, 0.3);
+    background: rgba(15, 23, 42, 0.95);
 }
 
 .chat-input input {
@@ -306,6 +345,10 @@ body {
     outline: none;
 }
 
+.chat-input input::placeholder {
+    color: #6b7280;
+}
+
 .chat-input button {
     padding: 12px 18px;
     border: none;
@@ -314,10 +357,38 @@ body {
     color: #fff;
     cursor: pointer;
     box-shadow: 0 0 15px #7a00ff;
+    font-weight: 600;
 }
 
+.chat-input button:hover {
+    filter: brightness(1.1);
+}
+
+/* Texto do limite de perguntas */
+.chat-limit {
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 0 4px 0;
+    opacity: 0.8;
+}
+
+/* Link para voltar */
+.chat-voltar {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+.chat-voltar a {
+    color: #00eaff;
+    text-decoration: none;
+}
+
+.chat-voltar a:hover {
+    text-decoration: underline;
+}
+
+/* Animação das mensagens */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(5px); }
-    to   { opacity: 1; transform: translateY(0); }
-    }
-    
+    to   { opacity: 1; transform:
